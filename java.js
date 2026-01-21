@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // ГЛОБАЛЬНЫЕ ДАННЫЕ
     // ===========================
     const searchData = [
-        { title: "Game of Thrones", url: "#", image: "https://via.placeholder.com/55x55/1e1e1e/ffffff?text=GOT", category: "Озвучка" },
-        { title: "Friends", url: "#", image: "https://via.placeholder.com/55x55/1e1e1e/ffffff?text=Friends", category: "Озвучка" },
-        { title: "Breaking Bad", url: "#", image: "https://via.placeholder.com/55x55/1e1e1e/ffffff?text=BB", category: "Озвучка" },
-        { title: "The Kominsky Method", url: "#", image: "https://via.placeholder.com/55x55/1e1e1e/ffffff?text=TKM", category: "Озвучка" },
-        { title: "Stranger Things", url: "#", image: "https://via.placeholder.com/55x55/1e1e1e/ffffff?text=ST", category: "Субтитры" },
-        { title: "The Crown", url: "#", image: "https://via.placeholder.com/55x55/1e1e1e/ffffff?text=TC", category: "Субтитры" },
-        { title: "House of Cards", url: "#", image: "https://via.placeholder.com/55x55/1e1e1e/ffffff?text=HoC", category: "Озвучка" },
-        { title: "The Wire", url: "#", image: "https://via.placeholder.com/55x55/1e1e1e/ffffff?text=TW", category: "Озвучка" }
+        { title: "Game of Thrones", url: "#", image: "###", category: "Озвучка" },
+        { title: "Friends", url: "#", image: "###", category: "Озвучка" },
+        { title: "Breaking Bad", url: "#", image: "###", category: "Озвучка" },
+        { title: "The Kominsky Method", url: "#", image: "###", category: "Озвучка" },
+        { title: "Stranger Things", url: "#", image: "###", category: "Субтитры" },
+        { title: "The Crown", url: "#", image: "###", category: "Субтитры" },
+        { title: "House of Cards", url: "#", image: "###", category: "Озвучка" },
+        { title: "The Wire", url: "#", image: "###", category: "Озвучка" }
     ];
 
     const seriesDetails = {
@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // ===========================
-    // КАРТОЧКИ: ОБЩИЙ ОБРАБОТЧИК (ДЕЛЕГИРОВАНИЕ)
+    // КАРТОЧКИ: ОБЩИЙ ОБРАБОТЧИК
     // ===========================
     libraryGrid.addEventListener('click', (e) => {
         const card = e.target.closest('.library-card');
