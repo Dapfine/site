@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeriesVoice - Студия озвучки сериалов</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <a href="index.html" class="logo-icon">SV</a>
+                <h1>SeriesVoice</h1>
+                <p>Студия озвучки сериалов</p>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" placeholder="Поиск" id="search-input">
+                <div class="search-results" id="search-results"></div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="libary.html" class="active">БИБЛИОТЕКА</a>
+                <a href="about Us.html">НЕМНОГО О НАС</a>
+            </div>
+            
+            <div class="social-icons">
+                <a href="#">VK</a>
+                <a href="#">TG</a>
+                <a href="#">YT</a>
+            </div>
+            
+            <button class="support-btn">Поддержать нас</button>
+        </div>
+        
+
+        <div class="main-content">
+
+            <section id="library-section">
+                <div class="library-header">
+                    <h2 class="library-title">Локализации и озвучки SeriesVoice</h2>
+                    <div class="sort-options">
+                        <select id="sort-date">
+                            <option value="newest">Дата выхода новые</option>
+                            <option value="oldest">Дата выхода старые</option>
+                        </select>
+                        <select id="filter-status">
+                            <option value="all">Статус: Все</option>
+                            <option value="completed">Статус: Завершено</option>
+                            <option value="in-progress">Статус: В процессе</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="filters">
+                    <button class="filter-btn active" data-type="dubbing">Озвучка</button>
+                    <button class="filter-btn" data-type="text">Текст</button>
+                </div>
+                
+                <div class="library-grid" id="library-grid">
+                    <div class="library-card" data-date="2023-11-15" data-status="completed" data-type="dubbing" data-title="Game of Thrones">
+                        <div class="library-card-img">
+                            <img src="image/Game of Throne.jpg" alt="Game of Thrones">
+                        </div>
+                        <div class="library-card-title">Game of Thrones</div>
+                    </div>
+                    
+                    <div class="library-card" data-date="2023-10-01" data-status="completed" data-type="dubbing" data-title="Friends">
+                        <div class="library-card-img">
+                            <img src="image/Friends.jpg" alt="Friends">
+                        </div>
+                        <div class="library-card-title">Friends</div>
+                    </div>
+                    
+                    <div class="library-card" data-date="2023-09-20" data-status="completed" data-type="dubbing" data-title="Breaking Bad">
+                        <div class="library-card-img">
+                            <img src="image/Breaking Bad.jpg" alt="Breaking Bad">
+                        </div>
+                        <div class="library-card-title">Breaking Bad</div>
+                    </div>
+                    
+                    <div class="library-card" data-date="2023-12-05" data-status="in-progress" data-type="dubbing" data-title="The Kominsky Method">
+                        <div class="library-card-img">
+                            <img src="image/The Kominsky Method.jpg" alt="The Kominsky Method">
+                        </div>
+                        <div class="library-card-title">The Kominsky Method</div>
+                    </div>
+                    
+                    <div class="library-card" data-date="2023-08-10" data-status="completed" data-type="text" data-title="Stranger Things">
+                        <div class="library-card-img">
+                            <img src="image/Stranger Things.jpg" alt="Stranger Things">
+                        </div>
+                        <div class="library-card-title">Stranger Things</div>
+                    </div>
+                    
+                    <div class="library-card" data-date="2023-11-01" data-status="in-progress" data-type="text" data-title="The Crown">
+                        <div class="library-card-img">
+                            <img src="image/The Crown.jpg" alt="The Crown">
+                        </div>
+                        <div class="library-card-title">The Crown</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="description-section" class="hidden">
+                <button class="back-btn" id="back-btn">
+                    <span>←</span> Вернуться в библиотеку
+                </button>
+                
+                <div class="description-header">
+                    <div class="description-image">
+                        <img id="description-image" src="" alt="Описание сериала">
+                    </div>
+                    <div class="description-info">
+                        <h2 class="description-title" id="description-title"></h2>
+                        <div class="description-status">
+                            <span class="status-label">Статус:</span>
+                            <span class="status-value" id="description-status"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="description-body">
+                    <div class="description-section">
+                        <h3>Описание</h3>
+                        <p class="description-text" id="description-text"></p>
+                    </div>
+                    
+                    <div class="description-section">
+                        <h3>Детали</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <h4>Жанр</h4>
+                                <p id="description-genre"></p>
+                            </div>
+                            <div class="info-item">
+                                <h4>Дата выхода</h4>
+                                <p id="description-date"></p>
+                            </div>
+                            <div class="info-item">
+                                <h4>Платформа</h4>
+                                <p id="description-platform"></p>
+                            </div>
+                            <div class="info-item">
+                                <h4>Тип</h4>
+                                <p id="description-type"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="description-section">
+                        <h3>Основная команда</h3>
+                        <ul class="team-list" id="description-team"></ul>
+                    </div>
+                    
+                    <div class="description-section">
+                        <h3>Актеры озвучания</h3>
+                        <ul class="voice-actors-list" id="description-voice-actors"></ul>
+                    </div>
+                    
+                    <div class="description-footer">
+                        <button class="support-project-btn">Поддержать проект</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Contact Section -->
+            <section class="contact">
+                <div class="contact-header">
+                    <div class="contact-icon">✉</div>
+                    <h2>Связь с нами</h2>
+                </div>
+                <div class="contact-info">
+                    <span class="contact-email">seriesvoice@gmail.com</span>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="java.js"></script>
+</body>
+</html>
